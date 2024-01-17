@@ -39,11 +39,11 @@ export default {
                 description: this.description,
                 imageUrl: this.imageUrl
             };
-            baseUrl = "asd";
+            baseURL = "asd";
 
             axios({
                 method: "POST",
-                url: `${baseUrl}`,
+                url: `${baseURL}`,
                 data: JSON.stringify(newCategory),
                 headers: {
                     'Content-Type': 'application/json'

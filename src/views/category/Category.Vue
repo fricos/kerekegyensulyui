@@ -1,17 +1,41 @@
 <template>
     <div class="container">
-        <div class="wrapper">
-            <h2>Kategóriáink</h2>
-            
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2>Kategóriáink</h2>
+                <router-link :to="{name: 'AddCategory'}">
+                    <button class="btn">Kategória hozzáadása</button>
+                </router-link>"
+            </div>
+        <div class="row">
+            <div v-for="category of categories" :key="category.id" class="col-xl-4 col-md-6 col-12 pt-3 d-flex">
+                <CategoryBox :category="category"></CategoryBox>
+            </div>
+        </div>
         </div>
     </div>
 </template>
 <script>
-//const axios = require("axios");
-
+const axios = require("axios");
+import CategoryBox from '../../component/category/CategoryBox.vue';
 export default {
+    name: "Category",
+    components: {CategoryBox},
     data() {
-        return {};
+        return {
+            baseURL = "asd";
+            categories: [],
+        };
+    },
+    methods: {
+        async getCategories() {
+            await axios.get(`${this.baseURL}/category`)
+            .then(res => this.categories = res.data)
+            .catch(err => console.log(err));
+        },
+    },
+    mounted() {
+        this.getCategories();
     },
 };
 </script>
