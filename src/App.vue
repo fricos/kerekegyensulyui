@@ -3,8 +3,47 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </nav>
-  <router-view/>
+  <router-view
+  :baseURL="baseURL"
+  :categories="categories"
+  :products="products"
+  ></router-view>
 </template>
+
+
+<script>
+import Navbar from "./components/Navbar.vue"
+import axios from 'axios'
+export default {
+    components: {Navbar},
+    data() {
+      return {
+        baseURL: "",
+        products: [],
+        categories: []
+      }
+    },
+    methods: {
+      async fetchData() {
+        await axios.get(this.baseURL + "category/")
+        .then(res => {
+          this.categories = res.data
+        }).catch(err => 
+          console.log('err', err));
+
+          await axios.get(this.baseURL + "product/")
+        .then(res => {
+          this.products = res.data
+        }).catch(err => 
+          console.log('err', err));
+      }
+    },
+    mounted() {
+      this.fetchData();
+    }
+};
+</script>
+
 
 <style>
 @import url("https://fonts.googleapis.com/css?family=Poppins:wgth@300;400;500;600;700;800;900&display=swap");

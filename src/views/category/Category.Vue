@@ -16,27 +16,20 @@
     </div>
 </template>
 <script>
-const axios = require("axios");
+
 import CategoryBox from '../../component/category/CategoryBox.vue';
 export default {
     name: "Category",
+    props: ["categories"],
     components: {CategoryBox},
     data() {
         return {
-            baseURL = "asd";
-            categories: [],
+            baseURL = "";
         };
     },
-    methods: {
-        async getCategories() {
-            await axios.get(`${this.baseURL}/category`)
-            .then(res => this.categories = res.data)
-            .catch(err => console.log(err));
-        },
+    methods: {},
     },
-    mounted() {
-        this.getCategories();
-    },
+    mounted() {},
 };
 </script>
 <style scoped>
