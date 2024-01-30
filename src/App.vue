@@ -1,21 +1,19 @@
 <template>
-  <Navbar>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </Navbar>
+  <div id="app">
   <router-view
   :baseURL="baseURL"
   :categories="categories"
   :products="products"
   ></router-view>
+  </div>
 </template>
 
 
 <script>
-import Navbar from "./components/Navbar.vue"
+//import Navbar from "./components/Navbar.vue"
 import axios from 'axios'
 export default {
-    components: {Navbar},
+    //components: {Navbar},
     data() {
       return {
         baseURL: "https://limitless-lake-55070.herokuapp.com/",

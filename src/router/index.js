@@ -1,15 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import Category from '../views/category/Category.vue'
-import AddCategory from '../views/category/AddCategory.vue'
-import Admin from '../views/Admin.vue'
+import Home from '../views/HomeView.vue'
+import AddCategory from '../views/Category/AddCategory.vue'
+import Category from '../views/Category/Category.vue'
+import Admin from '../views/AdminPage.vue'
 import Product from '../views/product/ProductPage.vue'
+
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: Home
   },
   {
     path: '/about',

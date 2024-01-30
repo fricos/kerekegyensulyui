@@ -8,7 +8,10 @@
                 </router-link>"
             </div>
         <div class="row">
-            <div v-for="category of categories" :key="category.id" class="col-xl-4 col-md-6 col-12 pt-3 d-flex">
+            <div v-for="category of categories" 
+            :key="category.id" 
+            class="col-xl-4 col-md-6 col-12 pt-3 d-flex"
+            >
                 <CategoryBox :category="category"></CategoryBox>
             </div>
         </div>
@@ -17,9 +20,9 @@
 </template>
 <script>
 
-import CategoryBox from '../../component/category/CategoryBox.vue';
+import CategoryBox from '../../components/category/CategoryBox.vue'
 export default {
-    name: "Category",
+    name: "Category-page",
     props: ["categories"],
     components: {CategoryBox},
     data() {
