@@ -39,7 +39,7 @@ export default {
                 description: this.description,
                 imageUrl: this.imageUrl
             };
-            baseURL = "asd";
+            const baseURL = "https://limitless-lake-55070.herokuapp.com/";
 
             axios({
                 method: "POST",

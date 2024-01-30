@@ -24,12 +24,9 @@ export default {
     components: {CategoryBox},
     data() {
         return {
-            baseURL = "";
+            baseURL: "https://limitless-lake-55070.herokuapp.com/"
         };
-    },
-    methods: {},
-    },
-    mounted() {},
+    }
 };
 </script>
 <style scoped>

@@ -5,11 +5,8 @@
             <button class="btn">Admin Katgóriák</button>
         </router-link>
         <br />
-        <router-link :to="{name='AdminProduct'}">
+        <router-link :to="{name: 'AdminProduct'}">
             <button class="btn">Admin Termékek</button>
-        </router-link>
-        <router-link :to="{name='Category'}">
-            <button class="btn">Admin Képtár</button>
         </router-link>
     </div>
 </div>

@@ -1,8 +1,8 @@
 <template>
-  <nav>
+  <Navbar>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
-  </nav>
+  </Navbar>
   <router-view
   :baseURL="baseURL"
   :categories="categories"
@@ -18,7 +18,7 @@ export default {
     components: {Navbar},
     data() {
       return {
-        baseURL: "",
+        baseURL: "https://limitless-lake-55070.herokuapp.com/",
         products: [],
         categories: []
       }
