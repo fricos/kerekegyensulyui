@@ -1,7 +1,7 @@
 <template>
   <div id="app">
   <router-view
-  :baseURL="baseURL"
+  
   :categories="categories"
   :products="products"
   ></router-view>
@@ -10,36 +10,36 @@
 
 
 <script>
-//import Navbar from "./components/Navbar.vue"
-import axios from 'axios'
+
+//import axios from 'axios'
 export default {
-    //components: {Navbar},
-    data() {
+   data() {
       return {
-        baseURL: "https://limitless-lake-55070.herokuapp.com/",
+
         products: [],
         categories: []
       }
-    },
-    methods: {
-      async fetchData() {
-        await axios.get(this.baseURL + "category/")
-        .then(res => {
-          this.categories = res.data
-        }).catch(err => 
-          console.log('err', err));
-
-          await axios.get(this.baseURL + "product/")
-        .then(res => {
-          this.products = res.data
-        }).catch(err => 
-          console.log('err', err));
-      }
-    },
-    mounted() {
-      this.fetchData();
     }
-};
+}
+//    methods: {
+//      async fetchData() {
+//        await axios.get(this.baseURL + "category/")
+//        .then(res => {
+//          this.categories = res.data
+//        }).catch(err => 
+//          console.log('err', err));
+//
+//          await axios.get(this.baseURL + "product/")
+//        .then(res => {
+//          this.products = res.data
+//        }).catch(err => 
+//          console.log('err', err));
+//      }
+//    },
+//    mounted() {
+//      this.fetchData();
+//    }
+//};
 </script>
 
 
