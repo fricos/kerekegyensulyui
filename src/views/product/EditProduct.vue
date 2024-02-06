@@ -2,66 +2,74 @@
     <body>
         <div class="container">
         <div class="wrapper">
-            <div class="col-12 text-center"><h2>Kategória hozzáadása</h2></div>
-            <form class="addcat">
-                <div class="input-box">
+            <div class="col-12 text-center"><h2>Termék szerkesztése</h2></div>
+            <form class="editprod">
+                <div class="input-select">
                     <label for="name">Kategória</label>
-                    <input type="text" class="name" placeholder="Kategória neve" v-model="categoryName" required>
+                    <select v-model="categoryId" required>
+                        <option v-for="category in categories" :key="category.id" :value="category.id">{{category.categoryName}}</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <label for="name">Termék</label>
+                    <input type="text" v-model="name" required class="name">
                 </div>
                 <div class="input-area">
                     <label for="desc">Leírás</label>
-                    <textarea type="text" class="desc" placeholder="Kategória leírása" v-model="description" required></textarea>
+                    <textarea type="text" v-model="desciption" required class="desc"></textarea>
                 </div>
                 <div class="input-box">
                     <label for="img">Kép</label>
-                    <input type="url" class="img" placeholder="Kategória képe" v-model="imageUrl" required>
+                    <input type="url" v-model="imageURL" required class="img">
                 </div>
-                <button type="button" class="btn" @click="addCartegory">KÉSZ</button>
+                <div class="input-box">
+                    <label for="price">Ár</label>
+                    <input type="number" v-model="price" required class="price">
+                </div>
+                <button type="button" class="btn" @click="addProduct">KÉSZ</button>
             </form>
         </div>
     </div>
     </body>
-    
 </template>
 <script>
-//const axios = require("axios");
-//const sweetalert = require("sweetalert");
+import axios from 'axios'
 export default {
+    props:["baseURL","categories"],
     data() {
         return {
-            categoryName: "",
-            description: "",
-            imageUrl: "",
-        };
+            id: null,
+            categoryId: null,
+            name: null,
+            desciption: null,
+            imageURL: null,
+            price: null
+        }
     },
-    //methods: {
-    //    addCartegory () {
-    //        console.log(this.categoryName,this.description,this.imageUrl);
-    //        const newCategory = {
-    //            categoryName: this.categoryName,
-    //            description: this.description,
-    //            imageUrl: this.imageUrl
-    //        };
-            //const baseURL = "https://limitless-lake-55070.herokuapp.com/";
-//
-            //axios({
-            //    method: "POST",
-            //    url: `${baseURL}`,
-            //    data: JSON.stringify(newCategory),
-            //    headers: {
-            //        'Content-Type': 'application/json'
-            //    }
-            //}).then(() => {
-            //    sweetalert({
-            //        text: 'Kategória sikeren hozzáadva!',
-            //        icon: 'success',
-            //    })
-            //}).catch(err => {
-            //    console.log(err)
-            //})
-       // }
-    //}
-};
+    methods: {
+        addProduct() {
+            const newProduct ={
+                categoryId: this.categoryId,
+                desciption: this.desciption,
+                name: this.name,
+                imageURL: this.imageURL,
+                price: this.price
+            }
+            
+            axios.post(this.baseURL+"product/add", newProduct)
+            .then(() =>{
+                this.$router.push({name: 'AdminProduct'});
+                alert({
+                    text: "Termék hozzáadva",
+                    icon: "succes"
+                })
+            }).catch((err) => {
+                console.log("err", err);
+            })
+
+        }
+    }
+}
 </script>
 <style scoped>
 body {
@@ -97,6 +105,13 @@ body {
     margin: 50px 0;
 }
 
+.wrapper .input-select {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    margin: 50px 0;
+}
+
 .wrapper .input-area {
     position: relative;
     width: 100%;
@@ -109,10 +124,21 @@ body {
     height: 100%;
     border: none;
     outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 40px;
     font-size: 16px;
     color: rgba(0, 0, 0, 1);
     padding: 20px 45px 20px 20px;
+}
+.input-select select{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 1);
+    padding: 20px 35px 20px 20px;
 }
 .input-area textarea{
     width: 100%;
@@ -162,5 +188,6 @@ body {
 
 h2{
     font-size: 28px;
+    font-weight: 550;
 }
 </style>

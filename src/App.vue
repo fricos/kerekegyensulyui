@@ -1,9 +1,11 @@
 <template>
   <div id="app">
   <router-view
-  
+  v-if="categories && products"
+
   :categories="categories"
   :products="products"
+  @fetchData="fetchData"
   ></router-view>
   </div>
 </template>
@@ -16,8 +18,8 @@ export default {
    data() {
       return {
 
-        products: [],
-        categories: []
+        products: null,
+        categories: null
       }
     }
 }

@@ -6,7 +6,9 @@
         <div class="card-body">
             <h5 class="card-title">{{ product.name }}</h5>
             <p class="card-text">{{ product.description.substring(0, 65) }}</p>
-            <a href="#" class="btn">go somewhere</a>
+            <router-link :to="{name: 'EditProduct'}">
+                <button class="btn">Szerkesztés</button>
+            </router-link>
         </div>
     </div>
 </template>
