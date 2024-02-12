@@ -2,8 +2,10 @@
     <body>
         <div class="container">
         <div class="wrapper">
-            <div class="col-12 text-center"><h2>Termék szerkesztése</h2></div>
-            <form class="editprod">
+            <div class="col-12 text-center">
+                <h2>Termék szerkesztése</h2>
+            </div>
+            <form v-if="product" class="editprod">
                 <div class="input-select">
                     <label for="name">Kategória</label>
                     <select v-model="categoryId" required>
@@ -33,41 +35,41 @@
     </body>
 </template>
 <script>
-import axios from 'axios'
+//import axios from 'axios'
 export default {
-    props:["baseURL","categories"],
+    //props:["baseURL","categories"],
     data() {
-        return {
-            id: null,
-            categoryId: null,
-            name: null,
-            desciption: null,
-            imageURL: null,
-            price: null
-        }
+    //    return {
+    //        id: null,
+    //        categoryId: null,
+    //        name: null,
+    //        desciption: null,
+    //        imageURL: null,
+    //        price: null
+    //    }
     },
     methods: {
-        addProduct() {
-            const newProduct ={
-                categoryId: this.categoryId,
-                desciption: this.desciption,
-                name: this.name,
-                imageURL: this.imageURL,
-                price: this.price
-            }
-            
-            axios.post(this.baseURL+"product/add", newProduct)
-            .then(() =>{
-                this.$router.push({name: 'AdminProduct'});
-                alert({
-                    text: "Termék hozzáadva",
-                    icon: "succes"
-                })
-            }).catch((err) => {
-                console.log("err", err);
-            })
-
-        }
+        //addProduct() {
+        //    const newProduct ={
+        //        categoryId: this.categoryId,
+        //        desciption: this.desciption,
+        //        name: this.name,
+        //        imageURL: this.imageURL,
+        //        price: this.price
+        //    }
+        //    
+        //    axios.post(this.baseURL+"product/add", newProduct)
+        //    .then(() =>{
+        //        this.$router.push({name: 'AdminProduct'});
+        //        alert({
+        //            text: "Termék hozzáadva",
+        //            icon: "succes"
+        //        })
+        //    }).catch((err) => {
+        //        console.log("err", err);
+        //    })
+//
+        //}
     }
 }
 </script>

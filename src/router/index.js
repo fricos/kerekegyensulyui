@@ -6,6 +6,7 @@ import Category from '../views/Category/Category.vue'
 import Admin from '../views/AdminPage.vue'
 import Product from '../views/product/ProductPage.vue'
 import AddProduct from '../views/product/AddProduct.vue'
+import EditProduct from '../views/product/EditProduct.vue'
 
 
 const routes = [
@@ -34,7 +35,7 @@ const routes = [
   },
   {
     //path: 'admin/category/:id',
-    path: 'admin/category/EditCategory',
+    path: '/admin/category/EditCategory',
     name: 'EditCategory',
     component: EditCategory
   },
@@ -52,7 +53,13 @@ const routes = [
     path: '/admin/product/add',
     name: 'AddProduct',
     component: AddProduct
-  }
+  },
+  {
+    //path: 'admin/product/:id',
+    path: '/admin/product/EditProduct',
+    name: 'EditProduct',
+    component: EditProduct
+  },
 ]
 
 const router = createRouter({

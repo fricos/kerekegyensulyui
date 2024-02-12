@@ -33,41 +33,41 @@
     </body>
 </template>
 <script>
-import axios from 'axios'
+//import axios from 'axios'
 export default {
     props:["baseURL","categories"],
     data() {
-        return {
-            id: null,
-            categoryId: null,
-            name: null,
-            desciption: null,
-            imageURL: null,
-            price: null
-        }
+        //return {
+        //    id: null,
+        //    categoryId: null,
+        //    name: null,
+        //    desciption: null,
+        //    imageURL: null,
+        //    price: null
+        //}
     },
     methods: {
-        addProduct() {
-            const newProduct ={
-                categoryId: this.categoryId,
-                desciption: this.desciption,
-                name: this.name,
-                imageURL: this.imageURL,
-                price: this.price
-            }
-            
-            axios.post(this.baseURL+"product/add", newProduct)
-            .then(() =>{
-                this.$router.push({name: 'AdminProduct'});
-                alert({
-                    text: "Termék hozzáadva",
-                    icon: "succes"
-                })
-            }).catch((err) => {
-                console.log("err", err);
-            })
+        //addProduct() {
+        //    const newProduct ={
+        //        categoryId: this.categoryId,
+        //        desciption: this.desciption,
+        //        name: this.name,
+        //        imageURL: this.imageURL,
+        //        price: this.price
+        //    }
+        //    
+        //    axios.post(this.baseURL+"product/add", newProduct)
+        //    .then(() =>{
+        //        this.$router.push({name: 'AdminProduct'});
+        //        alert({
+        //            text: "Termék hozzáadva",
+        //            icon: "succes"
+        //        })
+        //    }).catch((err) => {
+        //        console.log("err", err);
+        //    })
 
-        }
+        //}
     }
 }
 </script>
