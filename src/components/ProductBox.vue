@@ -4,9 +4,11 @@
             <img :src="product.imageURL" class="card-img-top embed-resposive-item" alt="kártya kép">
         </div>
         <div class="card-body">
-            <h5 class="card-title">{{ product.name }}</h5>
+            <router-link :to="{name: 'ShowDetails', params: {id: product.id}}">
+                <h5 class="card-title">{{ product.name }}</h5>
+            </router-link>
             <p class="card-text">{{ product.description.substring(0, 65) }}</p>
-            <router-link :to="{name: 'EditProduct'}">
+            <router-link :to="{name: 'EditProduct'}" v-show="$route.name == 'AdminProduct'">
                 <button class="btn">Szerkesztés</button>
             </router-link>
         </div>

@@ -1,26 +1,28 @@
 <template>
   <router-view
-  
+  style="min-height: 60vh;" 
 
   :categories="categories"
   :products="products"
   
   ></router-view>
-
+<Footer />
 </template>
 
 
 <script>
-
+import Footer from '@/components/Footer.vue';
+//import Navbar from '@/components/Navbar.vue';
 //import axios from 'axios'
 export default {
-   data() {
-      return {
-
-        products: null,
-        categories: null
-      }
-    }
+    components: { Footer,  },
+    data() {
+        return {
+            products: null,
+            categories: null
+        };
+    },
+    
 }
 //    methods: {
 //      async fetchData() {

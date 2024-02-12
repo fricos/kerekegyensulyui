@@ -4,7 +4,7 @@
       <button class="btn">Admin</button>
     </router-link>
     <div id="background-div" class="page-holder">
-      <div class="container">
+      <div class="container text-center">
         <button class="btn-2">Bérles</button>
         <p>Bérelj nálunk környezetbarát közlekedésiezközöket!</p>
       </div>
@@ -21,22 +21,37 @@
         </div>
       </div>
     </div>
+    <div class="container-3">
+      <div class="wrapper">
+        <div class="col-12 text-center">
+          <h2 class="pt-3">Termékeink</h2>
+        </div>
+      </div>
+      <div class="wrapper">
+        <div v-for="index in this.productSize" :key="index" class="col-md-4 col-xl-3 col-6 pt3 justify-content-around d-flex">
+          <ProductBox :product="products[index-1]"></ProductBox>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import ProductBox from '@/components/ProductBox.vue';
 import CategoryBox from '@/components/category/CategoryBox.vue';
 export default{
   name: "Home-page",
-  components: {CategoryBox},
-  props: ["categories"],
+  components: { CategoryBox, ProductBox },
+  props: ["categories", "products"],
   data() {
     return {
-      categorySize: 0
+      categorySize: 0,
+      productSize: 0
     }
   },
   mounted() {
-    this.categorySize = Math.min(20, this.categories.length)
+    //this.categorySize = Math.min(8, this.categories.length);
+    //this.productSize = Math.min(12, this.products.length);
   }
 }
 </script>
@@ -44,7 +59,6 @@ export default{
 .btn{
   position: relative;
   margin-top: 20px;
-  
   width: 310px;
   height: 50px;
   border: none;
@@ -58,12 +72,20 @@ export default{
   color:black;
 }
 p {
+  display: flex;
   align-items: flex-start;
   margin-top: 10px;
   background-color: aliceblue;
 }
 .container {
   padding-top: 100px;
+}
+.container-2 {
+  margin-top: 20px;
+}
+.container-3 {
+  margin-top: 30px;
+  margin-bottom: 15px;
 }
 .btn-2{
   position: relative;
@@ -93,7 +115,7 @@ p {
   min-height: 100vh;
 }
 #background-div {
-  background: url(https://cdn.discordapp.com/attachments/1153584270158331975/1168999891318612060/szines_bicikli_illusztracio.jpg?ex=65cbc77d&is=65b9527d&hm=6c5765dcc5ea4404387493fae95a74a2fbbc91098c6d628a4b17f8d2af37be13&);
+  background: url(https://media.discordapp.net/attachments/1156291108968599632/1158446568391856258/ironbike-2020-szeged-alfold-zsigacsaba-kerekpartura-bekescsaba-kerekparut-bringazas.jpg?ex=65dcc1f0&is=65ca4cf0&hm=ce3cb23255c5c18c97fc4645deab5326f49f5e3bb3762058c3f1ccb298f13961&=&format=webp&width=1183&height=666);
   background-size: cover !important;
   background-repeat: no-repeat;
   background-position: center;

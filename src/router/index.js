@@ -7,12 +7,14 @@ import Admin from '../views/AdminPage.vue'
 import Product from '../views/product/ProductPage.vue'
 import AddProduct from '../views/product/AddProduct.vue'
 import EditProduct from '../views/product/EditProduct.vue'
+import ShowDetails from '../views/product/ShowDetails.vue'
+import ListProducts from '../views/Category/ListProducts.vue'
 
 
 const routes = [
   {
     path: '/',
-    name: 'home',
+    name: 'Home',
     component: Home
   },
   {
@@ -34,12 +36,6 @@ const routes = [
     component: Category
   },
   {
-    //path: 'admin/category/:id',
-    path: '/admin/category/EditCategory',
-    name: 'EditCategory',
-    component: EditCategory
-  },
-  {
     path: '/admin',
     name: 'Admin',
     component: Admin
@@ -55,10 +51,28 @@ const routes = [
     component: AddProduct
   },
   {
+    //path: 'admin/category/:id',
+    path: '/admin/category/EditCategory',
+    name: 'EditCategory',
+    component: EditCategory
+  },
+  {
     //path: 'admin/product/:id',
     path: '/admin/product/EditProduct',
     name: 'EditProduct',
     component: EditProduct
+  },
+  {
+    //path: '/product/show/:id'
+    path: '/product/show/details',
+    name: 'ShowDetails',
+    component: ShowDetails
+  },
+  {
+    //path: '/category/show/:id'
+    path: '/category/show/details',
+    name: 'ListProducts',
+    component: ListProducts
   },
 ]
 

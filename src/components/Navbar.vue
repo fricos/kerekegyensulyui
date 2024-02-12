@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
 
-      <router-link class="navbar-brand" :to="{ name: 'Home' }">
+      <router-link :to="{ name: 'Home' }">
         <img id="logo" src="../assets/bikeicon.png" />
       </router-link>
 
@@ -88,7 +88,7 @@
   </template>
   <script>
   export default {
-    name: "Navbar-v",
+    name: "NavbarView",
     data() {
       return {
         token: null,
