@@ -2,7 +2,7 @@
     <footer>
       <div class="container pt-5">
         <div class="row">
-          <div class="col-md-4 col-6">
+          <div class="col-md-3 col-6">
             <ul style="list-style-type: none">
               <li class="text-light font-weight-bold pb-2"><h3>Tudj meg rólunk többet!</h3></li>
               <li><a class="footer-link font-weight-light" href="#">Rólunk</a></li>
@@ -10,30 +10,26 @@
             </ul>
           </div>
   
-          <div class="col-md-4 col-6">
+          <div class="col-md-3 col-6">
             <ul style="list-style-type: none">
               <li class="text-light font-weight-bold"><h3>Kapcsolatok</h3></li>
-              <li><a class="footer-link font-weight-light" href="#">Facebook</a></li>
-              <li><a class="footer-link font-weight-light" href="#">Twitter</a><br></li>
-              <li><a class="footer-link font-weight-light" href="#">Instagram</a><br></li>
+              <li><a class="footer-link font-weight-light" href="https://www.facebook.com">Facebook</a></li>
+              <li><a class="footer-link font-weight-light" href="https://www.x.com">Twitter</a><br></li>
+              <li><a class="footer-link font-weight-light" href="https://www.instagram.com">Instagram</a><br></li>
             </ul>
           </div>
   
-          <div class="col-md-4 col-6">
+          <div class="col-md-3 col-6">
             <ul style="list-style-type: none">
               <li class="text-light font-weight-bold"><h3>Egyéb</h3></li>
-              <li><a class="footer-link font-weight-light" href="#">Visszatérítés</a></li>
-              <li><a class="footer-link font-weight-light" href="#">súgó</a><br></li>
+              <li><a class="footer-link font-weight-light" href="/Help">Súgó</a><br></li>
             </ul>
           </div>
-        </div>
-  
-        <div class="row">
-          <div class="col-12">
-            <div class="text-center py-5">
-              
-            </div>
+          <div class="col-md-2 col-6">
+            <img src="../assets/bikelogo.jpg" alt="">
+            <h3 class="text-light font-weight-bold pt-3 pb-3 text-center">Kerekegyensúly</h3>
           </div>
+          <div class="col-md-1"></div>
         </div>
       </div>
     </footer>
@@ -46,6 +42,11 @@
   </script>
   
   <style>
+  img {
+    max-width: 100%;
+    border-radius: 90px;
+  }
+
   footer {
     margin-top : 100px;
     background-color:#232F3E;
