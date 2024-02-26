@@ -5,8 +5,8 @@
           <div class="col-md-3 col-6">
             <ul style="list-style-type: none">
               <li class="text-light font-weight-bold pb-2"><h3>Tudj meg rólunk többet!</h3></li>
-              <li><a class="footer-link font-weight-light" href="#">Rólunk</a></li>
-              <li><a class="footer-link font-weight-light" href="#">Android App</a><br></li>
+              <li><a class="footer-link font-weight-light" href="/">Rólunk</a></li>
+              <li><a class="footer-link font-weight-light" href="#">Android App (készül)</a><br></li>
             </ul>
           </div>
   
@@ -22,7 +22,7 @@
           <div class="col-md-3 col-6">
             <ul style="list-style-type: none">
               <li class="text-light font-weight-bold"><h3>Egyéb</h3></li>
-              <li><a class="footer-link font-weight-light" href="/Help">Súgó</a><br></li>
+              <li><a class="footer-link font-weight-light" href="/Help">GYIK</a><br></li>
             </ul>
           </div>
           <div class="col-md-2 col-6">
@@ -48,7 +48,6 @@
   }
 
   footer {
-    margin-top : 100px;
     background-color:#232F3E;
     font-size:16px;
   }

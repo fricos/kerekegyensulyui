@@ -1,8 +1,8 @@
 
 <template>
-    <div class="container">
+    <div class="page-holder" id="container">
         <div class="wrapper text-center">
-            kép
+            <img src="../assets/bikelogo.jpg" alt="">
         </div>
         <div class="wrapper">
             <h2 class="">Regisztráció</h2>
@@ -74,9 +74,12 @@ export default {
 }
 </script>
 <style scoped>
-.container {
-    background: #fff;
-    background-size: cover;
+img {
+    max-height: 60px;
+}
+#container {
+    background: url("../assets/bikebg.png");
+    background-size: cover !important;
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
@@ -99,6 +102,7 @@ form {
     border: 2px solid black;
     padding: 25px;
     border-radius: 20px;
+    backdrop-filter: blur(15px);
 }
 
 label {

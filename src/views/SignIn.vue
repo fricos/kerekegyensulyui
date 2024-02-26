@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="wrapper text-center">
-            kép
+            <img src="../assets/bikelogo.jpg" alt="">
         </div>
         <div class="wrapper">
             <h2 class="">Bejelentkezés</h2>
@@ -50,7 +50,7 @@ export default {
 </script>
 <style scoped>
 .container {
-    background: #fff;
+    background: url("../assets/bikebg.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

@@ -9,7 +9,7 @@
         <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
         <div class="motto">
           <button class="btn-2">Bérles</button>
-          <p>Mozgás, Élet, Energia Kerekegyensúly</p>
+          <p>Mozgás, Élet, Energia - Kerekegyensúly</p>
         </div>
       </div>
     </div>
@@ -43,14 +43,16 @@
           <h2 class="pt-3">Rólunk</h2>
         </div>
       </div>
-      <div class="wrapper">
+      <div class="wrapper" id="#rolunk">
         <div class="aboutus">
           <h4 class="text-center">Sziasztok, mi a Kerekegyensúly bicikli és elektromos roller kölcsönző vagyunk</h4>
           <h3>Célunk:</h3>
           <p>
             A Szeged város zöldebbé tétele, azzal hogy kibérlelik elekromos rollereinket ahelyett hogy járművükkel járnának az emberek a mindennapjaikban.
-            A családok és a gyerekek 
-            Mottónk az emberek mozgásra ösztönzése illetve a zöld élet népszerűsítése. 
+            A családok és egyéb társaságok számára a szabadság élményét átadni.
+            A zöld élet népszerűsítése.
+            Mottónk a Mozgás, Élet, Energia.
+            Mozgás fontossága, az élet kiegyensúlyozása és a megújuló és tiszta energia használata.
           </p>
           <h3>Előnyeink:</h3>
           <ul>
@@ -156,7 +158,7 @@ p {
   min-height: 100vh;
 }
 #background-div {
-  background: url(https://cdn.discordapp.com/attachments/1156291108968599632/1209414764426428466/dej8o3m-81588b1a-a12b-4916-ac5b-f645f42b26f7.png?ex=65e6d645&is=65d46145&hm=90de3ffeb26386ad642de190946d70dd39c8076e1fd791598a9f046c16d5e2db&);
+  background: url("../assets/bikebg.png");
   background-size: cover !important;
   background-repeat: no-repeat;
   background-position: center;
