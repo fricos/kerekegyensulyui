@@ -8,7 +8,7 @@
       <p>A Bérelt kerékpárt a bérelt napon az időpont alapján veheti át ahol (amennyiben kért) a túra vezető várja a kerékpárokkal együtt</p>
       <br/>
       <h4>Mennyi a maximális bérlés ideje</h4>
-      <p>3 nap mely elsőnap reggel 8-től harmadik nap délután 20-ig</p>
+      <p>3 nap mely elsőnap reggel 8-től harmadik nap este 20-ig</p>
       <br/>
       <h4>Mi történik ha nem viszem vissza időben</h4>
       <p>Abban az esetben ha nem érkeik vissza hozzánk a kerékpár az előre megbeszélt időpontban, az adott termék óránkénti béreli összegét és 20% tehát 120%-át kell kifizetni, minden óra kezdete alapján. Példa: ha a késés 1 óra 10 perc akkor a fizetendő késedelmi díj 2 óra bérlés összegének 120%-a. Amennyiben 3 napon belülnem szolgáltatja vissza a kerékpárt a foglaló összegét elveszti.</p>
@@ -24,6 +24,15 @@
       <br/>
       <h4>Hogyan zárjam le a kerékpárt</h4>
       <p>Minden kerékpárhoz biztosítunk egy megfelelő biztonsági lakatot amelyel rögzíteni kell, abban az esetben ha elhaggyák azt, rögítés: a rözítésnél a hátsó kereket illetve vázat kell rögzíteni a biciklitárolóhoz.</p>
+      <br/>
+      <h4>A kellékek</h4>
+      <p>A kellékek bérelhetőek például kulacstartó, nyereg, kosár vagy lámpa; illetve lehet vásárolni is például kulacs vagy ételhordó.</p>
+      <br/>
+      <h4>Csak magyarországban lehet használni</h4>
+      <p>Az elektromos rollereinket csak magyarországon lehet használni, a kerékpárokat lehet külföldön is amennyiben előre kitölti a külföldi használati kérelmet.</p>
+      <br/>
+      <h4>Elektromos roller töltése</h4>
+      <p>Az elekromos rollereinket tilos tölteni. Kivéve a 5 kijelölt töltő állomásainkon.</p>
       <br/>
     </div>
   </div>

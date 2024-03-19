@@ -25,11 +25,11 @@
               <li><a class="footer-link font-weight-light" href="/Help">GYIK</a><br></li>
             </ul>
           </div>
-          <div class="col-md-2 col-6">
+          <div class="col-md-3 col-6 " id="logo">
             <img src="../assets/bikelogo.jpg" alt="">
             <h3 class="text-light font-weight-bold pt-3 pb-3 text-center">Kerekegyensúly</h3>
+            <p>Mozás, Élet, Energia</p>
           </div>
-          <div class="col-md-1"></div>
         </div>
       </div>
     </footer>
@@ -41,9 +41,10 @@
   }
   </script>
   
-  <style>
+  <style scoped>
   img {
     max-width: 100%;
+    max-height: 100px;
     border-radius: 90px;
   }
 
@@ -71,10 +72,6 @@
     cursor: pointer;
   }
   
-  #logo {
-    width: 150px;
-  }
-  
   footer {
     font-family: 'Roboto', sans-serif;
   }
@@ -82,5 +79,13 @@
   h3 {
     font-size: 20px;
     font-weight: 550;
+    margin-bottom: 0px;
+  }
+
+  p {
+    color: #fff;
+    font-size: 12px;
+    text-align: center !important;
+    max-width: 100%;
   }
   </style>

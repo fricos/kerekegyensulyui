@@ -45,7 +45,7 @@
       </div>
       <div class="wrapper" id="#rolunk">
         <div class="aboutus">
-          <h4 class="text-center">Sziasztok, mi a Kerekegyensúly bicikli és elektromos roller kölcsönző vagyunk</h4>
+          <h4 class="text-center">Üdvözlünk, mi a Kerekegyensúly bicikli és elektromos roller kölcsönző vagyunk</h4>
           <h3>Célunk:</h3>
           <p>
             A Szeged város zöldebbé tétele, azzal hogy kibérlelik elekromos rollereinket ahelyett hogy járművükkel járnának az emberek a mindennapjaikban.
