@@ -26,8 +26,8 @@
             </ul>
           </div>
           <div class="col-md-3 col-6 " id="logo">
-            <img src="../assets/bikelogo.jpg" alt="">
-            <h3 class="text-light font-weight-bold pt-3 pb-3 text-center">Kerekegyensúly</h3>
+            <img src="../assets/jobb.png" alt="">
+            <h3 class="text-light font-weight-bold pt-3 pb-3 text-left">Kerekegyensúly</h3>
             <p>Mozás, Élet, Energia</p>
           </div>
         </div>
@@ -46,6 +46,7 @@
     max-width: 100%;
     max-height: 100px;
     border-radius: 90px;
+    margin-right: right;
   }
 
   footer {
@@ -85,7 +86,7 @@
   p {
     color: #fff;
     font-size: 12px;
-    text-align: center !important;
+    text-align: left !important;
     max-width: 100%;
   }
   </style>

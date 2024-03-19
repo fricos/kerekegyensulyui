@@ -48,7 +48,7 @@
           <h4 class="text-center">Üdvözlünk, mi a Kerekegyensúly bicikli és elektromos roller kölcsönző vagyunk</h4>
           <h3>Célunk:</h3>
           <p>
-            A Szeged város zöldebbé tétele, azzal hogy kibérlelik elekromos rollereinket ahelyett hogy járművükkel járnának az emberek a mindennapjaikban.
+            A Szeged város zöldebbé tétele, azzal hogy kibérlelik elekromos rollereinket ahelyett, hogy járművükkel járnának az emberek a mindennapjaikban.
             A családok és egyéb társaságok számára a szabadság élményét átadni.
             A zöld élet népszerűsítése.
             Mottónk a Mozgás, Élet, Energia.
